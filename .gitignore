@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# --- 打包产物 ---
+build/
+dist/
+*.spec
+*.exe
+*.dll
+*.pdb
+
+# --- 本机数据 / 隐私 ---
+logs/
+*.log
+settings.json
+identity.json
+kb-cache/
+cloud_config_dump.txt
+knowledge-report.txt
+tools/preview/
+tools/e2e-*.json
+tools/e2e-capture.png
+tools/exe-ocr-result.json
+
+# --- 知识库材料（体积大、版权各自归属，不入库）---
+know/*
+!know/README.md
+
+# --- 编辑器 / 系统 ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
