@@ -10,6 +10,17 @@
 
 ![卡片](docs/card.png)
 
+## 下载
+
+不想装 Python？直接取发行版里的单文件 exe（Windows 10/11 x64，58.9 MB，免安装）：
+
+**[⬇ ScreenAnswer-1.0.0-win64.exe](https://github.com/Saria-Gins/screen-answer/releases/download/v1.0.0/ScreenAnswer-1.0.0-win64.exe)**
+
+SHA-256：`cb1b595e8e1d7327506f07b508c6174a0fe17c9218a7352897579299e197c7e2`
+
+> exe 未签名，首次运行 SmartScreen 可能提示「更多信息 → 仍要运行」。
+> 把 `know/` 与 exe 放在同一目录即可加载资料（exe 内置 OCR、PDF 解析，不含任何题库）。
+
 ## 功能
 
 - **三种触发方式**：全局快捷键截图 / 框选区域 / 卡片按钮；多显示器按鼠标所在屏幕截取，也可选「所有屏幕」。
@@ -100,6 +111,7 @@ API Key 用 Windows DPAPI 加密后存到 `%APPDATA%\ScreenAnswer\settings.json`
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --onefile --windowed `
   --name ScreenAnswer --icon "assets\icon.ico" `
+  --version-file "packaging\version_info.txt" `
   --hidden-import winrt --hidden-import winrt.windows.foundation `
   --hidden-import winrt.windows.foundation.collections `
   --hidden-import winrt.windows.globalization `
